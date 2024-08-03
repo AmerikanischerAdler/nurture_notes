@@ -4,6 +4,10 @@
     font-family: Artifika;
 }
 
+body {
+    background-color: #E5D4B8;
+}
+
 header nav {
     height: 5vh;
     width: 100vw;
@@ -11,8 +15,8 @@ header nav {
     align-items: center;
     justify-content: space-evenly;
     position: fixed;
-    background-color: #fff;
     z-index: 500;
+    background-color: #E5D4B8;
 }
 
 header nav div:not(.logo-contain) {
@@ -84,6 +88,7 @@ header nav div a svg:hover {
     height: 75%;
     width: 75%;
     margin-left: -100px;
+    background-color: #E5D4B8;
 }
 
 .search-contain svg {
@@ -109,7 +114,11 @@ header nav div a svg:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: #E5D4B8;
+}
+
+.title-contain h1 span {
+    color: #B1EFFF;
 }
 
 h1 {
@@ -118,17 +127,19 @@ h1 {
 }
 
 hr {
-    color: #000;
+    color: #B1EFFF;
     width: 30vw;
     margin-top: -25px;
     margin-bottom: 5%;
+    background-color: #E5D4B8;
 }
 
 .contain-all {
     height: auto;
     width: 99vw;
     display: grid;
-    background-image: linear-gradient(to bottom right, #B1EFFF, #fff);
+    /* background-image: linear-gradient(to bottom right, #B1EFFF, #fff); */
+    background-color: #E5D4B8;
     border-radius: 15px;
 }
 
@@ -151,7 +162,8 @@ hr {
     height: 550px;
     margin: 5% auto;
     border-radius: 2px 4px 4px 2px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #685448;
     -webkit-box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
     -moz-box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
     box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
@@ -203,7 +215,8 @@ hr {
     width: 40px;
     left: -20px;
     height: 550px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #685448;
     -webkit-transform: rotate3d(0,1,0,-90deg);
     -moz-transform: rotate3d(0,1,0,-90deg);
     transform: rotate3d(0,1,0,-90deg);
@@ -268,12 +281,19 @@ hr {
 }
 
 .cover {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #685448;
 }
 
 .left-side h2 span:first-child {
   font-weight: 400;
   font-size: 13px;
   padding-right: 20px;
+}
+
+.foot {
+    height: 10vh;
+    width: 100vw;
+    background: repeating-linear-gradient(-45deg, #B1EFFF, #B1EFFF 8px, transparent 8px, transparent 18px);
 }
 
