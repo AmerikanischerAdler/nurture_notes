@@ -13,6 +13,10 @@ def home():
 def gallery():
     return render_template('gallery.html')
 
+@app.route('/journal')
+def journal():
+    return render_template('journal.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 

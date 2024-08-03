@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Artifika:wght@400&display=swap');
+
+*{
+    font-family: Artifika;
+}
+
+header nav {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    background-color: #fff;
+    z-index: 500;
+}
+
+header nav div:not(.logo-contain) {
+    margin-top: 7px;
+}
+
+header nav .logo-contain {
+    height: 100%;
+    width: 20vw;
+    display: flex;
+}
+
+header nav .logo-contain:hover {
+    cursor: pointer;
+}
+
+header nav .logo-contain h4 {
+    margin-top: 0vh;
+    font-size: 30px;
+}
+
+header nav div a:not(#logo) {
+    height: 100%;
+    width: auto;
+    text-decoration: none;
+}
+
+header nav #logo {
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    text-decoration: none;
+    color: #000;
+}
+
+header nav #logo:hover {
+    cursor: pointer;
+}
+
+header nav div a svg:not(#logo-text) {
+    height: 75%;
+    width: auto;
+    color: #000;
+}
+
+header nav div a #logo-text {
+    height: 100%;
+    width: auto;
+    color: #000;
+
+}
+
+header nav div a svg:hover {
+    cursor: pointer;
+}
+
+.search-contain {
+    height: 100%;
+    width: 45vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.search-contain input {
+    height: 75%;
+    width: 75%;
+    margin-left: -100px;
+}
+
+.search-contain svg {
+    width: auto;
+    height: 80%;
+}
+
+.icon-contain {
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-contain a #bars, #gal {
+    height: 80%;
+}
+
+.title-contain {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 150px;
+}
+

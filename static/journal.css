@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Artifika:wght@400&display=swap');
+
+*{
+    font-family: Artifika;
+}
+
+header nav {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    background-color: #fff;
+    z-index: 500;
+}
+
+header nav div:not(.logo-contain) {
+    margin-top: 7px;
+}
+
+header nav .logo-contain {
+    height: 100%;
+    width: 20vw;
+    display: flex;
+}
+
+header nav .logo-contain:hover {
+    cursor: pointer;
+}
+
+header nav .logo-contain h4 {
+    margin-top: 0.25vh;
+    font-size: 30px;
+}
+
+header nav div a:not(#logo) {
+    height: 100%;
+    width: auto;
+    text-decoration: none;
+}
+
+header nav #logo {
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    text-decoration: none;
+    color: #000;
+}
+
+header nav #logo:hover {
+    cursor: pointer;
+}
+
+header nav #logo h4 span {
+    color: #B1EFFF;
+}
+
+header nav div a svg:not(#logo-text) {
+    height: 75%;
+    width: auto;
+    color: #000;
+}
+
+header nav div a #logo-text {
+    height: 100%;
+    width: auto;
+    color: #000;
+}
+
+header nav div a svg:hover {
+    cursor: pointer;
+}
+
+.search-contain {
+    height: 100%;
+    width: 45vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.search-contain input {
+    height: 75%;
+    width: 75%;
+    margin-left: -100px;
+}
+
+.search-contain svg {
+    width: auto;
+    height: 80%;
+}
+
+.icon-contain {
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-contain a #bars, #gal {
+    height: 80%;
+}
+
+.title-contain {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 100px;
+    color: #000;
+}
+
+hr {
+    color: #000;
+    width: 30vw;
+    margin-top: -25px;
+    margin-bottom: 5%;
+}
+
+.contain-all {
+    height: auto;
+    width: 99vw;
+    display: grid;
+    background-image: linear-gradient(to bottom right, #B1EFFF, #fff);
+    border-radius: 15px;
+}
+
+.journal-contain {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Try Journal */ 
+
+.container {
+    z-index: 1;
+    perspective:3000px;
+}
+
+.container .book {
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 550px;
+    margin: 5% auto;
+    border-radius: 2px 4px 4px 2px;
+    background-color: #fff;
+    -webkit-box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
+    -moz-box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
+    box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
+    font-weight: 400;
+    color: #2b2b2b;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+    transition: transform .5s;
+}
+
+.container .book:hover {
+    -webkit-transform: rotate3d(0,1,0,35deg);
+    -moz-transform: rotate3d(0,1,0,35deg);
+    transform: rotate3d(0,1,0,35deg);
+    cursor: pointer;
+}
+
+.container .book > div,
+.container .front > div {
+    display: block;
+    position: absolute;
+}
+
+.container .front {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+    transition: transform .5s;
+    -webkit-transform: translate3d(0,0,20px);
+    -moz-transform: translate3d(0,0,20px);
+    transform: translate3d(0,0,20px);
+    z-index: 10;
+}
+
+.container .front > div {
+    width: 400px;
+    height: 550px;
+}
+
+.container .left-side {
+    width: 40px;
+    left: -20px;
+    height: 550px;
+    background-color: #fff;
+    -webkit-transform: rotate3d(0,1,0,-90deg);
+    -moz-transform: rotate3d(0,1,0,-90deg);
+    transform: rotate3d(0,1,0,-90deg);
+}
+
+.cover .name {
+    position: absolute;
+    font-size: 30px;
+    transform: rotate(0deg);
+    top: 75px;
+    left: 75px;
+}
+
+.author {
+    font-weight: 400;
+    position: absolute;
+    top: 475px;
+    left: 50px;
+    opacity: .8;
+}
+
+.container .front > div {
+    border-radius: 0 3px 3px 0;
+    box-shadow: 
+    inset 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .front:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: -1px;
+    width: 1px;
+}
+
+.container .cover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    width: 3px;
+    background: rgba(0,0,0,0.1);
+    box-shadow: 1px 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.container h2 {
+    width: 500px;
+    height: 40px;
+    color: #2b2b2b;
+    font-size: 15px;
+    line-height: 40px;
+    padding-right: 10px;
+    text-align: right;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(90deg) translateY(-40px);
+    -moz-transform: rotate(90deg) translateY(-40px);
+    transform: rotate(90deg) translateY(-40px);
+}
+
+.cover {
+    background-color: #fff;
+}
+
+.left-side h2 span:first-child {
+  font-weight: 400;
+  font-size: 13px;
+  padding-right: 20px;
+}
+
