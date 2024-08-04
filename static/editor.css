@@ -156,10 +156,7 @@ hr {
     justify-content: center;
 }
 
-
-/* Try Book */
-
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap');
+/* Book */
 
 :root {
   /* colors */
@@ -168,13 +165,9 @@ hr {
   --dark-text: #2A2935;
   
   /* spacing */
-  /* this is what defines the global scale */
   --baseline: 12px;
   
   /* fonts */
-  --book-title: 'Tulpen One', sans-serif;
-  --title: 'Cormorant Garamond', serif;
-  --body: 'Cormorant Garamond', serif;
   --base-size: var(--baseline) * 1.2;
 }
 
@@ -191,7 +184,7 @@ hr {
   perspective: 1200px;
 }
 
-.book__page {
+.book-page {
   position: relative;
   width: 50%;
   height: 100%;
@@ -203,22 +196,16 @@ hr {
   background-image: linear-gradient(90deg, rgba(227,227,227,1) 0%, rgba(247,247,247,0) 18%);
 }
 
-.book__page:nth-of-type(1) {
+.book-page:nth-of-type(1) {
   background-image: linear-gradient(-90deg, rgba(227,227,227,1) 0%, rgba(247,247,247,0) 18%);
 }
 
-.book__page--1 {
+.book-page-1 {
   cursor: pointer;
   overflow: hidden;
 }
 
-.book__page--1 img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-.book__page--2 {
+.book-page-2 {
   position: absolute;
   right: 0;
   pointer-events: none;
@@ -227,19 +214,19 @@ hr {
   background-image: linear-gradient(90deg, rgba(227,227,227,1) 0%, rgba(247,247,247,0) 18%);
 }
 
-.book__page--4 {
+.book-page-4 {
   cursor: pointer;
   padding: 0 calc(var(--baseline) * 3);
 }
 
-.book__page-front {
+.book-page-front {
   position: absolute;
   width: 100%;
   height: 100%;
   transform: rotateY(0deg) translateZ(1px);
 }
 
-.book__page-back {
+.book-page-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -247,113 +234,10 @@ hr {
   transform: rotateY(180deg) translateZ(1px);
 }
 
-.page__content {
+.page-content {
   padding: var(--baseline);
   height: 100%;
   position: relative;
-  text-align: center;
-}
-
-.page__content-book-title {
-  font-family: var(--book-title);
-  font-size: calc(var(--base-size) * 3);
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: var(--dark-text);
-  margin-top: calc(var(--baseline) * 5);
-  margin-bottom: calc(var(--baseline) * 2);
-}
-
-.page__content-author {
-  font-family: var(--title);
-  font-size: calc(var(--base-size) * 1.2);
-  font-weight: 100;
-  text-transform: uppercase;
-  color: var(--dark-text);
-  border-top: 1px solid var(--dark-text);
-  border-bottom: 1px solid var(--dark-text);
-  display: inline-block;
-  padding: calc(var(--baseline) / 2) calc(var(--baseline) / 5);
-  margin-bottom: calc(var(--baseline) * 6);
-}
-
-.page__content-credits {
-  font-family: var(--title);
-  text-transform: uppercase;
-  font-size: calc(var(--base-size) * 0.8);
-  margin-bottom: calc(var(--baseline) * 2);
-  letter-spacing: 1px;
-}
-
-.page__content-credits span {
-  display: block;
-  font-size: calc(var(--base-size) * 1.2);
-  letter-spacing: 0;
-}
-
-.page__content-copyright {
-  position: absolute;
-  width: calc(100% - (var(--baseline) * 2));
-  bottom: calc(var(--baseline) * 2);
-  font-family: var(--title);
-  font-size: calc(var(--base-size) * 0.8);
-  text-transform: uppercase;
-}
-
-.page__content-title {
-  font-family: var(--title);
-  font-size: calc(var(--base-size) * 1);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: calc(var(--baseline) * 5);
-  margin-bottom: calc(var(--baseline) * 3);
-}
-
-.page__content-table {
-  width: 100%;
-  margin-top: calc(var(--baseline) * 2);
-}
-
-.page__content-table td {
-  font-family: var(--title);
-  font-size: calc(var(--base-size) * 1);
-  padding-bottom: calc(var(--baseline) * 1.5);
-  text-transform: uppercase;
-}
-
-.page__content-blockquote {
-  margin-bottom: calc(var(--baseline) * 2);
-}
-
-.page__content-blockquote-text {
-  font-family: var(--title);
-  font-size: calc(var(--base-size) * 0.67);
-  font-style: italic;
-  text-align: justify;
-}
-
-.page__content-blockquote-reference {
-  font-family: var(--title);
-  font-size: calc(var(--base-size) * 0.7);
-  margin-top: calc(var(--baseline) * 0.3);
-  float: right;
-  text-transform: uppercase;
-}
-
-.page__content-text {
-  font-family: var(--title);
-  font-size: calc(var(--base-size) * 0.67);
-  text-align: justify;
-  text-indent: var(--baseline);
-}
-
-.page__number {
-  position: absolute;
-  bottom: var(--baseline);
-  width: calc(100% - (var(--baseline) * 2));
-  font-family: var(--title);
-  font-size: calc(var(--base-size) * 0.67);
   text-align: center;
 }
 
@@ -361,12 +245,10 @@ input[type="radio"] {
   display: none;
 }
 
-input[type="radio"]:checked + .book__page {
+input[type="radio"]:checked + .book-page {
   transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
   transform: rotateY(-180deg);
 }
-
-
 
 footer {
     height: 10vh;
