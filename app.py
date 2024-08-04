@@ -17,6 +17,10 @@ def gallery():
 def journal():
     return render_template('journal.html')
 
+@app.route('/editor')
+def editor():
+    return render_template('editor.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 

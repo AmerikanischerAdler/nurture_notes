@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nurture Notes - Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/editor.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo-contain">
+        <a href="home" id="logo">
+          <svg id="logo-text" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M36 38.577H11.16a1.404 1.404 0 0 1-1.404-1.405V5.904c0-.775.628-1.404 1.404-1.404h24.842a2.245 2.245 0 0 1 2.244 2.245v29.587a2.245 2.245 0 0 1-2.244 2.245M13.571 4.5v34.077M25.859 4.504v20.218m6.678-.064V4.504m-6.678 8.867H19.56m6.299 8.165H19.56m6.299-4.083H19.56"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M34.51 25.942a3.617 3.617 0 0 0-5.074-.658l-.117.09l-.117-.09a3.617 3.617 0 1 0-4.415 5.73l4.532 3.493l4.532-3.492a3.617 3.617 0 0 0 .658-5.074m-2.498 12.636V43.5l-2.744-1.533l-2.743 1.533v-4.923"/></svg>
+          <h4><span>N</span>urture <span>N</span>otes</h4>
+        </a>
+      </div>
+      <div class="search-contain">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+        <input type="text" placeholder="Find Moments & Memories...">
+      </div>
+      <div class="icon-contain">
+        <a href="home"><svg id="home-pg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg></a>
+        <a href="editor"><svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg></a>
+        <a href="gallery"><svg id="gal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M160 32c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H328 280 200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"/></svg></a>
+        <a href="journal"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M15 0v20h1.5c.8 0 1.5-.7 1.5-1.5v-17c0-.8-.7-1.5-1.5-1.5zM2 18c0 1.1.9 2 2 2h10V0H4C2.9 0 2 .9 2 2zM4 5h8v1H4zm3 2h5v1H7z"/></svg></a>
+        <a><svg id="bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="title-contain">
+    <h1><span>M</span>y <span>E</span>ditor</h1>
+    <hr>
+  </div>
+
+  <div class="contain-all">
+    <div class="editor-contain">
+      <textarea name="edit"></textarea>
+    </div>
+
+    <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+    <script src="../static/ckeditor/ckeditor.js"></script>
+    <script>
+      window.onload = function() {
+        CKEDITOR.replace('edit', {
+          uiColor: '#B1EFFF',
+          width: '75%',
+          height: 500,
+        });
+      };
+    </script>
+  </div>
+  <div id="contain-all">
+    <div class="cover">
+      <div class="book">
+      <label for="page-1"  class="book__page book__page--1">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/193203/1111.jpg" alt="">
+      </label>
+      
+      <label for="page-2" class="book__page book__page--4">
+        <div class="page__content">
+          <h1 class="page__content-title">I</h1>
+          <div class="page__content-blockquote">
+            <p class="page__content-blockquote-text">HARI SELDON — . . . born in the 11,988th year of the Galactic Era; died 12,069. The dates are more commonly given in terms of the current Foundational Era as -79 to the year 1 F.E. Born to middle-class parents on Helicon, Arcturus sector (where his father, in a legend of doubtful authenticity, was a tobacco grower in the hydroponic plants of the planet), he early showed amazing ability in mathematics. Anecdotes concerning his ability are innumerable, and some are contradictory. At the age of two, he is said to have. . . </p>
+            <p class="page__content-blockquote-text">. . . Undoubtedly his greatest contributions were in the field of psychohistory. Seldon found the field little more than a set of vague axioms; he left it a profound statistical science. . . . </p>
+            <p class="page__content-blockquote-text">. . . The best existing authority we have for the details of his life is the biography written by Gaal Dornick who, as a young man, met Seldon two years before the great mathematician's death. The story of the meeting . . .</p>
+            <span class="page__content-blockquote-reference">Encyclopedia Galactica*</span>
+          </div>
+          <div class="page__content-text">
+            <p>His name was Gaal Dornick and he was just a country boy who had never seen Trantor before. That is, not in real life. He had seen it many times on the hyper-video, and occasionally in tremendous three-dimensional newscasts covering an Imperial Coronation or the opening of a Galactic Council. Even though he had lived all his life on the world of Synnax, which circled a star at the edges of the Blue Drift, he was not cut off from civilization, you see. At that time, no place in the Galaxy was. </p>
+            <p>There were nearly twenty-five million inhabited planets in the Galaxy then, and not one but owed allegiance to the Empire whose seat was on Trantor. It was the last half-century in which that could be said. </p>
+            <p>To Gaal, this trip was the undoubted climax of his young, scholarly life. He had been in space before so that the trip, as a voyage and nothing more, meant little to him. To be sure, he had traveled previously only as far as Synnax's only satellite in order to get the data on the mechanics of meteor driftage which he needed for his dissertation, but space-travel was all one whether one travelled half a million miles, or as many light years. </p>
+          </div>
+          <div class="page__number">3</div>
+        </div>
+      </label>
+        
+      <!-- Resets the page -->
+      <input type="radio" name="page" id="page-1"/>
+        
+      <!-- Goes to the second page -->
+      <input type="radio" name="page" id="page-2"/>
+      <label class="book__page book__page--2">
+        <div class="book__page-front">
+          <div class="page__content">
+            <h1 class="page__content-book-title">Foundation</h1>
+            <h2 class="page__content-author">Isaac Asimov</h2>
+            
+            <p class="page__content-credits">
+              Introduction by 
+              <span>Paul Krugman</span>
+            </p>
+            
+            <p class="page__content-credits">
+              Illustrations by 
+              <span>Alex Wells</span>
+            </p>
+            
+            <div class="page__content-copyright">
+              <p>The Folio Society</p>
+              <p>London - MMXII</p>
+            </div>
+          </div>
+        </div>
+        <div class="book__page-back">
+          <div class="page__content">
+            <h1 class="page__content-title">Contents</h1>
+            <table class="page__content-table">
+              <tr>
+                <td align="left">Part I</td><td align="left">The Psycohistorians</td><td align="right">3</td>
+              </tr>
+              <tr>
+                <td align="left">Part II</td><td align="left">The Encyclopedists</td><td align="right">43</td>
+              </tr>
+              <tr>
+                 <td align="left">Part III</td><td align="left">The Mayors</td><td align="right">87</td>
+              </tr>
+              <tr>
+                <td align="left">Part IV</td><td align="left">The Traders</td><td align="right">147</td>
+              </tr>
+              <tr>
+                <td align="left">Part V</td><td align="left">The Merchant Princes</td><td align="right">173</td>
+              </tr>
+            </table>
+            
+            <div class="page__number">2</div>
+          </div>
+        </div>
+      </label>
+      </div>
+    </div>
+  </div>
+
+  <footer></footer>
+</body>
+</html>

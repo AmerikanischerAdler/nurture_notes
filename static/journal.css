@@ -91,6 +91,14 @@ header nav div a svg:hover {
     background-color: #E5D4B8;
 }
 
+input {
+    outline: none;
+}
+
+input:focus {
+    border: 3px solid #B1EFFF;
+}
+
 .search-contain svg {
     width: auto;
     height: 80%;
@@ -103,7 +111,7 @@ header nav div a svg:hover {
     justify-content: space-around;
 }
 
-.icon-contain a #bars, #gal {
+.icon-contain a svg:not(#home-pg) {
     height: 80%;
 }
 
