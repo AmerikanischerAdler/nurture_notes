@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Artifika:wght@400&display=swap');
 
+:root {
+  /* colors */
+  --body-bg: #FAFAFA;
+  --page-bg: #F5F5F5;
+  --dark-text: #2A2935;
+  
+  /* spacing */
+  --baseline: 12px;
+  
+  /* fonts */
+  --base-size: var(--baseline) * 1.2;
+}
+
 *{
     font-family: Artifika;
 }
@@ -156,20 +169,53 @@ hr {
     justify-content: center;
 }
 
-/* Book */
+/* Boxes */ 
 
-:root {
-  /* colors */
-  --body-bg: #FAFAFA;
-  --page-bg: #F5F5F5;
-  --dark-text: #2A2935;
-  
-  /* spacing */
-  --baseline: 12px;
-  
-  /* fonts */
-  --base-size: var(--baseline) * 1.2;
+.box-container {
+    height: 30vh;
+    width: 100vw;
+    margin-top: 100px;
+    margin-bottom: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.widget {
+    border-radius: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: #fff;
+}
+
+.widget:not(#prompts) {
+    height: 175px;
+    width: 350px;
+}
+
+#cal {
+    /* stuff */
+}
+
+#prompts {
+    height: 250px;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#check{
+    /* stuff */
+}
+
+/* Book */
 
 .cover {
   width: calc(var(--baseline) * 60);
