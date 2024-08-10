@@ -1,3 +1,5 @@
+//Calendar
+
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
@@ -113,4 +115,19 @@ prenexIcons.forEach(icon => {
         manipulate();
     });
 });
+
+//Checklist
+const form = document.querySelector("#item-form"), 
+    itemInput = document.querySelector("#item-input"),
+    itemList = document.querySelector(".item-list"),
+    feedback = document.querySelector(".feedback"),
+    addBtn = document.querySelector("#add-item"),
+    clearBtn = document.querySelector("#clear-list");
+
+console.log(form, itemInput);
+
+let list = [];
+
+
+
 
