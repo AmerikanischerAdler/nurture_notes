@@ -144,11 +144,8 @@ hr {
 
 .contain-all {
     height: auto;
-    width: 99vw;
+    width: 100%;
     display: grid;
-    /* background-image: linear-gradient(to bottom right, #B1EFFF, #fff); */
-    background-color: #E5D4B8;
-    border-radius: 15px;
 }
 
 .journal-contain {
